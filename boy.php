@@ -1,0 +1,1 @@
+<img src="images/612.jpg" width="964" height="411" alt="мальчики">

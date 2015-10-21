@@ -1,0 +1,1111 @@
+@import url(reset.css);
+@charset "utf-8";
+
+html {
+height: 100%;
+}
+body {
+	min-height:100%;
+	height: 100%;
+	color: #333333;
+    font: 11px Tahoma,Arial,Helvetica,sans-serif;
+    text-align: center;
+}
+
+
+#wrapper {
+	height: auto !important;
+	min-height:100%;
+	height: 100%;
+	margin:0 auto;
+	width:964px;
+
+}	
+
+#footer_space {
+height: 13px;
+clear: both;
+}
+#footer {
+height: 13px;
+clear: both;
+margin-top: -23px; /* к высоте футера 25 добавляем 10px-margin-bottom итого -35*/
+margin-bottom:10px;
+}
+
+
+
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+                                        /*Начало блока header*/
+.fix{
+	width: 964px;
+	height:150px;
+}
+
+	
+.box-fixed{
+	background-color:#FFF;
+	width: 964px;
+	height:126px;
+	position:fixed;
+}
+
+.header{
+	height: 72px;
+	outline: 0px solid #cc0000;
+	position: relative;
+	color: #595959;
+}
+
+.logo{
+	background-repeat: no-repeat;
+	height: 42px;
+	width: 113px;
+	outline: 0px solid #cccccc;
+	/*позиционируем логотип относительно header для этого у header(position: relative), а у logо(position: absolute)*/
+	position: absolute; 
+	bottom:10px;
+	left:0px;
+}
+
+/*для того чтобы картинка была как ссылка нужно прописать для <а> display: block и высоту картинка, иначе ссылка a href - воспринимается как строка*/
+
+.logo a{
+	cursor: pointer;
+    display: block;
+    font-size: 40px;
+    font-weight: bold;
+    height: 42px;
+    outline: 0 solid #cccccc;
+    width: 113px;
+}
+
+#main_menu {
+	margin-top:5px;
+}
+
+.nav_header{
+	position: absolute;
+	top:12px;
+	left:227px;
+	font-size: 12.5px;
+	}
+
+.nav_header li{
+	float:left;
+	margin-top:5px;	
+	margin-left:5px;
+	border-right: solid 1px #595959;
+}
+
+.nav_header li:last-child{
+	border-right: none;
+}
+
+.nav_header li a{
+	color:#595959;
+	font-family:Tahoma, Geneva, sans-serif;
+	display:block;
+	padding-right:5px;
+}
+	
+.nav_header li a:hover{
+color:#269E94;
+text-decoration:underline;
+}
+
+/*для того чтобы картинка была как ссылка нужно прописать display: block и высоту картинка, иначе ссылка a href - воспринимается как строка*/
+
+.block_right{
+    position: absolute;
+    right: 10px;
+    top: 30px;
+}
+
+.admin {
+	font-size:18px;
+	color:#c53c8a;
+	font-weight:bold;
+}
+
+
+.view_site a{
+	text-decoration:underline;
+}
+
+.view_site span{
+	font-size:14px;
+}
+
+.registr{
+    border-bottom: 1px solid #CCCCCC;
+    border-radius: 5px;
+    float: left;
+    list-style: none outside none;
+    padding: 0 10px;
+}
+
+.registr a{
+	display:block;
+	color:#595959;
+	height: 20px;
+    padding-top: 2px;
+    font-weight: bold;
+}
+
+.login{
+	background-color:#c53c8a;
+    border-radius: 5px;
+    float: left;
+    padding: 0 10px;}
+
+
+.login a {
+    color: #FFFFFF;
+    display: block;
+    font-weight: bold;
+    height: 20px;
+    padding-top: 2px;
+    vertical-align: middle;
+}
+
+.shop_bag{
+	float:right;
+	margin-top:5px;	
+	height:31px;
+	width:106px;
+}
+
+.shop_bag a{
+	height:31px;
+	width:106px;
+}
+
+
+.summa{
+	float:right;
+	color:#595959;
+	height:31px;
+	margin-left: 10px;
+	line-height:17px;
+}
+	
+	
+	
+	
+/*#shop_bag a{	
+background-image: url('/skins/default/img/shopping_cart.png);
+background-repeat:no-repeat;
+width:26px;
+height:31px;
+}
+*/
+		
+.search{
+	position:absolute;
+	top:34px;
+	left:230px;
+	}
+	
+	
+.search_pole{
+	width:237px;
+	height:21px;
+	border: 1px solid #ABADB3;
+	float:left;
+	padding-left:10px;
+	}
+	
+.search .button_find{
+	float:left;
+	width:61px;
+	height:23px;
+	background-image: url('/skins/default/img/gradient_pink.png');
+	border:none;
+	color:#FFF;
+	padding-bottom: 1px;
+	}
+
+
+.search .button_find:hover{
+	cursor:pointer;
+}
+                                        /*Конец блока header*/
+										
+
+
+.nav{
+	height:24px;
+	background: #269e94;
+	margin-bottom:0px;
+}
+
+.nav li{
+float:left;
+}
+
+.nav li a{
+	text-decoration: none;
+	color:#FFF;
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size: 14px;
+	display:block;
+	height:24px;
+	line-height:24px;
+	padding:0 15px;
+}
+
+.nav li a:hover{
+	background-color:#666;
+	text-decoration:underline;
+}
+
+                                        /*Конец блока menu*/
+										
+										
+                                        /*Начало блока map*/
+										
+.map {
+    background-color: white;
+    font-size: 11px;
+    height: 30px;
+    margin-bottom: 20px;
+    padding-left: 18px;
+}
+	
+.map li{
+float:left;
+margin-right: 27px;
+margin-top:10px;
+list-style-image:url('/skins/default/img/arrow.png');
+}
+
+.map li a{
+text-decoration: none;
+color: #444444;
+font-family:Verdana, Geneva, sans-serif;
+}
+										
+.map li a:hover{
+text-decoration: underline;
+}
+									
+										/*Конец блока map*/
+
+/*#wrapper {
+    min-height: 100%;
+    margin-bottom: -13px;
+}
+
+.buffer{
+	height: 13px;
+	outline: 0px solid #CC0000;
+}
+*/
+                                        /*Начало блока slider*/
+
+
+
+.slider {
+    height: 411px;
+    margin-bottom: 40px;
+    outline: 0 solid #CC0000;
+    width: 964px;
+}
+
+                                        /*Конец блока slider*/
+
+
+#conteiner {
+    margin: 20px 0;
+    outline: 0px solid #CC0000;
+}
+	
+#conteiner .girls, .boys{
+	outline: 0px solid #cc0000;
+	float:left;
+	}
+	
+	
+.girls, .boys{
+	margin:0px 16px;
+}
+
+#conteiner .title_category{
+    font-family:Verdana, Geneva, sans-serif;
+	margin:0 auto;
+	text-align:center;
+	margin-bottom:10px;
+	}
+	
+#conteiner .title_category a{
+	font-size:15px;
+	color: #4a4951;
+	font-weight:bold;
+}
+
+#conteiner .title_category a:hover{
+	color: #269E94;
+}
+	
+.pic_category{
+	margin-bottom:25px;
+}
+
+
+.newborn-girl {
+    height: 288px;
+    width: 288px;
+}
+
+.newborn-girl a{
+	background-image: url('/skins/default/img/newborn-girl.png');
+	background-position: 0px 0px;
+	display:block;
+	width:288px;
+	height:288px;
+}
+	
+.newborn-girl a:hover{
+	background-position: 0px 288px;
+}
+
+.girl_3-6{
+	width:288px;
+	height:288px;
+}
+
+.girl_3-6 a{
+	background-image: url('/skins/default/img/girl_3-6.png');
+	background-position: 0px 0px;
+	display:block;
+	width:288px;
+	height:288px;
+}
+
+	
+.girl_3-6 a:hover{
+	background-position: 0px 288px;
+}
+
+.older-girls{
+	width:288px;
+	height:288px;
+}
+
+.older-girls a{
+	background-image: url('/skins/default/img/older-girls.png');
+	background-position: 0px 0px;
+	display:block;
+	width:288px;
+	height:288px;
+}
+	
+.older-girls a:hover{
+	background-position: 0px 288px;
+}
+
+
+.newborn-boy{
+	width:288px;
+	height:288px;
+}
+
+.newborn-boy a{
+	background-image: url('/skins/default/img/newborn-boys.png');
+	background-position: 0px 0px;
+	display:block;
+	width:288px;
+	height:288px;
+}
+	
+.newborn-boy a:hover{
+	background-position: 0px 288px;
+}
+
+.boys-3-6{
+	width:288px;
+	height:288px;
+}
+
+.boys-3-6 a{
+	background-image: url('/skins/default/img/boys-3-6.png');
+	background-position: 0px 0px;
+	display:block;
+	width:288px;
+	height:288px;
+}
+	
+.boys-3-6 a:hover{
+	background-position: 0px 288px;
+}
+
+.older-boys{
+	width:288px;
+	height:288px;
+}
+
+.older-boys a{
+	background-image: url('/skins/default/img/older-boys.png');
+	background-position: 0px 0px;
+	display:block;
+	width:288px;
+	height:288px;
+}
+	
+.older-boys a:hover{
+	background-position: 0px 288px;
+}
+
+
+<!--Футер-->
+/*#footer {
+height: 13px;
+clear: both;
+margin-top: -13px;
+}
+*/
+
+.foot{
+	height:183px;
+	width:964px;
+	border-top:1px solid #cdcdcd;
+	position:relative;
+	background-color:#FF0;
+}
+
+.nav_footer{
+	font-size: 12.5px;
+	padding-top:10px;
+    margin-bottom: 50px;
+}
+
+.nav_footer li{
+float:left;
+margin-top:5px;	
+margin-left:0px !important;
+margin-right:10px;
+	}
+
+.nav_footer li a{
+color:#666666;
+font-family:Tahoma, Geneva, sans-serif;
+display:block;
+border-right: solid 1px #595959;
+padding-right:5px;
+	}
+	
+.nav_footer a:hover{
+color:#269E94;
+text-decoration:underline;
+}
+
+.news{
+	padding-bottom:50px;
+}
+
+.title_news, .title_follow{
+	color:#cc2c92;
+	font-weight:bold;
+	font-size:16px;
+}
+
+.title_news{
+	text-align:left;
+}
+	
+.description_news{
+	font-size:11px;
+	color:#999999;
+	margin-bottom:20px;
+	margin-top:3px;
+	text-align:left;
+
+}
+	
+.description_follow{
+	font-size:11px;
+	color:#999999;
+	margin-top:3px;
+	margin-bottom:7px;
+
+}
+
+	
+	
+.news .but{
+	background-image: url('/skins/default/img/button.jpg');
+	width:26px;
+	height:25px;
+	border:none;
+	float:left;
+}
+
+.news .but:hover{
+	cursor:pointer;
+}
+
+
+.news .search_pole{
+	width:247px;
+	height:23px;
+	border: 1px solid #ABADB3;
+	float:left;
+	padding:0px;
+}
+
+.pay{
+	height:25px;
+	position:absolute;
+	right:0px;
+	top: 10px;
+}
+
+.visa, .mastercard, .privat24{
+	float:left;
+}
+
+.visa{
+	background-image: url('/skins/default/img/pay.jpg');
+	width:39px;
+	height:25px;
+	background-position:0px 0px;
+}
+
+.mastercard{
+	background-image: url('/skins/default/img/pay.jpg');
+	background-position:-38px 0px;
+	width:38px;
+	height:25px;
+	margin: 0 12px;
+}
+
+.privat24{
+	background-image: url('/skins/default/img/pay.jpg');
+	background-position:56px 0px;
+	width:56px;
+	height:25px;
+}
+
+
+.description {
+    color: #999999;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    line-height: 21px;
+    text-align: center;
+    width: 210px;
+	margin:0 auto;
+	margin-bottom: 50px;
+}
+
+
+.follow{
+	position:absolute;
+	right:0px;
+	bottom:38px;
+	width:300px;
+	text-align:right;
+}
+
+.facebook, .twetter, .vkontakte{
+	float:right;
+}
+
+.facebook a{
+	background-image: url('/skins/default/img/social_icon.jpg');
+	width:25px;
+	height:25px;
+	display:block;
+	background-position:0px 0px;
+}
+
+
+.twetter a{
+	background-image: url('/skins/default/img/social_icon.jpg');
+	width:25px;
+	height:25px;
+	margin:0px 15px;
+	display:block;
+	background-position:-25px 0px;
+}
+
+
+.vkontakte a{
+	background-image: url('/skins/default/img/social_icon.jpg');
+	width:25px;
+	height:25px;
+	display:block;
+	background-position:25px 0px;
+}
+
+.copyright{
+	font-size:11px;
+	color:#999999;
+}
+
+/*Стили формы авторизации*/
+
+.form-container {
+   border: 1px solid #f2e3d2;
+   background-color: #f5f5f5;
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   border-radius: 8px;
+   -webkit-box-shadow: rgba(000,000,000,0.9) 0 1px 2px, inset rgba(255,255,255,0.4) 0 0px 0;
+   -moz-box-shadow: rgba(000,000,000,0.9) 0 1px 2px, inset rgba(255,255,255,0.4) 0 0px 0;
+   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+   font-family: 'Helvetica Neue',Helvetica,sans-serif;
+   text-decoration: none;
+   vertical-align: middle;
+   min-width:300px;
+   padding:20px;
+   margin:0 auto;
+   margin-bottom:20px;
+   margin-top:10px;
+   width:300px;
+   }
+.form-field {
+   border: 1px solid #c9b7a2;
+   background: #e4d5c3;
+   -webkit-border-radius: 4px;
+   -moz-border-radius: 4px;
+   border-radius: 4px;
+   color: #c9b7a2;
+   -webkit-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(000,000,000,0.7) 0 0px 0px;
+   -moz-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(000,000,000,0.7) 0 0px 0px;
+   box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(000,000,000,0.7) 0 0px 0px;
+   padding:8px;
+   margin-bottom:20px;
+   width:280px;
+   text-align: center;
+   }
+.form-field:focus {
+   background: #fff;
+   color: #725129;
+   }
+.form-container h2 {
+   text-shadow: #fdf2e4 0 1px 0;
+   font-size:18px;
+   margin: 0 0 10px 0;
+   font-weight:bold;
+   text-align:center;
+    }
+.form-title {
+   margin-bottom:10px;
+   color: #725129;
+   text-shadow: #fdf2e4 0 1px 0;
+   }
+.submit-container {
+   margin:8px 0;
+   text-align:right;
+   }
+.submit-button {
+   border: 1px solid #447314;
+   background: #6aa436;
+   background: -webkit-gradient(linear, left top, left bottom, from(#8dc059), to(#6aa436));
+   background: -webkit-linear-gradient(top, #8dc059, #6aa436);
+   background: -moz-linear-gradient(top, #8dc059, #6aa436);
+   background: -ms-linear-gradient(top, #8dc059, #6aa436);
+   background: -o-linear-gradient(top, #8dc059, #6aa436);
+   background-image: -ms-linear-gradient(top, #8dc059 0%, #6aa436 100%);
+   -webkit-border-radius: 4px;
+   -moz-border-radius: 4px;
+   border-radius: 4px;
+   -webkit-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   -moz-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   text-shadow: #addc7e 0 1px 0;
+   color: #31540c;
+   font-family: helvetica, serif;
+   padding: 8.5px 18px;
+   font-size: 14px;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.submit-button:hover {
+   border: 1px solid #447314;
+   text-shadow: #31540c 0 1px 0;
+   background: #6aa436;
+   background: -webkit-gradient(linear, left top, left bottom, from(#8dc059), to(#6aa436));
+   background: -webkit-linear-gradient(top, #8dc059, #6aa436);
+   background: -moz-linear-gradient(top, #8dc059, #6aa436);
+   background: -ms-linear-gradient(top, #8dc059, #6aa436);
+   background: -o-linear-gradient(top, #8dc059, #6aa436);
+   background-image: -ms-linear-gradient(top, #8dc059 0%, #6aa436 100%);
+   color: #fff;
+   }
+.submit-button:active {
+   text-shadow: #31540c 0 1px 0;
+   border: 1px solid #447314;
+   background: #8dc059;
+   background: -webkit-gradient(linear, left top, left bottom, from(#6aa436), to(#6aa436));
+   background: -webkit-linear-gradient(top, #6aa436, #8dc059);
+   background: -moz-linear-gradient(top, #6aa436, #8dc059);
+   background: -ms-linear-gradient(top, #6aa436, #8dc059);
+   background: -o-linear-gradient(top, #6aa436, #8dc059);
+   background-image: -ms-linear-gradient(top, #6aa436 0%, #8dc059 100%);
+   color: #fff;
+   }
+   
+/*FileManager*/   
+.file{
+	text-align:left;
+}
+
+.file_margin{
+	margin-right:10px;
+}
+
+/*Комментарии*/
+
+.comments, .news{
+	text-align:left;
+}
+
+.comment_block{
+	background-color: white;
+    border: 1px solid #ddd !important;
+    border-radius: 10px;
+    margin: 7px;
+    padding: 10px;
+}
+
+.comment_title{
+	word-wrap: break-word;
+}
+
+.comment_body {
+    padding-bottom: 15px;
+    padding-left: 30px;
+ 	line-height: 18px;
+	word-wrap: break-word;
+}
+
+.comment_date{
+	color:#999;
+	padding-left: 5px;
+}
+.comment_login{
+	width:200px;
+}
+
+
+.comments form table td, .news form table td .books form table td{
+    padding: 5px;
+}
+
+
+
+.comments_title, .news_title {
+    color: #464646;
+    font-weight: bold;
+
+}
+.comments_error, .comments_news {
+    color: #900 !important;
+    font-weight: bold;
+}
+
+
+.comments h1, .news h1{
+    color: #cc2c92;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 170%;
+    font-weight: bolder;
+    margin: 0 0 10px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+
+
+.comments form textarea, .news form textarea {
+    height: 200px;
+    width: 430px;
+}
+
+.news input[type="text"]{
+    width: 430px;
+}
+.comments form input{
+    width: 430px;
+}
+
+/*Модуль новости*/
+
+
+.news_date{
+	color:#777;
+}
+
+
+.news_title{
+	vertical-align:middle;
+	width:200px;
+}
+.news table td {
+	padding-bottom:20px;
+}
+textarea{
+	width:430px;
+}
+
+
+
+
+.admin_table .table th, .admin_table .table td {
+    border-top: 1px solid #ddd;
+    line-height: 18px;
+    padding: 8px;
+    text-align: left;
+    vertical-align: top;
+}
+
+
+
+textarea{
+	margin-bottom:20px;
+	height:150px;
+}
+
+.news_error{
+	color: #FF0000
+}
+
+.goods_cat{
+    width: 435px;
+}
+
+.goods{
+	text-align:left;
+}
+
+.goods_all_view{
+	text-align: left;
+	font-size:17px;
+	color:#cc2c92;
+	font-weight:500;
+	margin:20px 0;
+}
+
+.goods_add{
+	background-color:#cc2c92;
+	width:150px;
+	display:block;
+	padding: 5px 10px;
+}
+
+.goods_add a{
+	display:block;
+	color:#FFFFFF;
+	font-weight: bold;
+    padding: 5px 0;
+	text-align: center;
+}
+
+.goods_del_submit, .news_del_submit{
+	margin:20px 0;
+}
+
+.form-remember{
+	cursor:pointer;
+	position:relative;
+}
+
+.form-remember label{
+	position:absolute;
+	left:23px;
+}
+.check {
+	position:absolute;
+	bottom:11px;
+}
+
+.users_edit{
+	float:left;
+}
+
+.users_del{
+	float:left;
+	margin-left:15px;
+}
+.users td{
+	text-align:left;
+	padding: 20px;
+}
+.title{
+ color: #cc2c92;
+    font-size: 17px;
+    font-weight: 500;
+    text-align: left;
+}
+#users h2{
+	color:#0e81af;
+	font-size:18px;
+	text-align:left;
+	width:200px;
+	float:left;
+}
+
+
+.form_find_users{
+	float:right;
+}
+
+.form_find_users input[type="submit"]{
+	background:url('/skins/admin/img/search.png') no-repeat center center;
+	height:28px;
+	width:28px;
+	cursor:pointer;
+    border: none;
+	margin-left:10px;
+}
+
+.form_find_users input[type="text"]{
+	border: 1px solid #ccc;
+	height:24px;
+	line-height:24px;
+	padding-left:5px;
+	width:425px;
+	border-radius:5px;
+}
+
+
+#users .icon{
+    background: url("/skins/admin/img/icon.png") no-repeat scroll -30px 2px rgba(0, 0, 0, 0);
+    background-position: -32px 0;
+    height: 13px !important;
+    top: 2px;
+    width: 12px !important;
+}
+/*#users .submit_find{
+	background:url('/skins/admin/img/icon.png') no-repeat;
+}
+*/#users .all_users{
+	width:100%;
+	border-collapse: collapse;
+	margin-top:20px;
+}
+#users .button{
+	margin-top:20px;
+}
+
+#users .title_name{
+	color:#666;
+	font-weight:600;
+	width:150px;
+}
+
+#users .all_users tr{
+	text-align:left;
+}
+
+#users .all_users td{
+    border: 1px solid #ddd;
+	padding:5px;
+	background-color: #f9f9f9;
+}
+
+#users table td a{
+	text-decoration:underline;
+	color:#08c;
+}
+
+#users table th{
+	background-color:#333333;
+	color:#FFFFFF;
+	padding:5px;
+    border-right: 1px solid #ddd;
+}
+
+#users th:last-child{
+	border-right:none;
+}
+
+#users .r-l{
+ border-top-left-radius: 4px;
+}
+
+#users .r-r{
+ border-top-right-radius: 4px;
+}
+
+#users .find-info{
+	text-align:center;
+}
+
+
+.title_area{
+	width:430px;
+}
+
+
+.post_name {
+    font-weight: bold;
+}
+body {
+    font-family: Verdana,Geneva,sans-serif;
+    font-size: 12px;
+}
+
+
+
+.admin_table .r-l {
+    border-top-left-radius: 4px;
+}
+.admin_table table th {
+    background-color: #333333;
+    border-right: 1px solid #ddd;
+    color: #ffffff;
+    padding: 5px;
+}
+
+.admin_table table tr{
+	text-align:left;
+}
+
+.news_error{
+	padding-left:20px;
+}
+
+/* Books */
+
+.books_menu {
+	float: left;
+	background-color:#CCCCCC;
+}
+
+
+
+.navigator{
+	height:65px;
+	margin-bottom: 40px;
+}
+
+
+.navigator ul li{
+	float:left; /* рассполагаем списки в одну линию*/
+	background-color:#666; /* цвет блокам li*/
+}
+
+.navigator ul li a{
+	color:#fff; /* цвет шрифта*/
+	padding:0 15px; /* делаем отступы слева и справа для ссылок а*/
+	text-decoration:none; /* убираем нижнее поддчеркивание */
+	line-height:65px; /* межстрочный интервал (буквы будут по середине дива) - 65px потому что высота дива navigator height:65px;*/
+		/* чтобы наша ссылка приняла размеры li */
+	display:block; /*а строчный элемент - делаесм его блочным*/
+	height:65px; /* так же как и для li задать высоту 65px */
+}
+
+/* Ссылка при наведении*/
+
+.navigator ul li a:hover{
+	background-color:#CCC; /* меняем фон */
+	text-decoration:underline; /* добавляем нижнее поддчеркивание */
+}

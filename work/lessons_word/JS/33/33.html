@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Документ без названия</title>
+</head>
+
+<body>
+<script>
+
+
+
+// РАЗЛИЧИЯ PHP И JAVASCRIPT
+
+// PHP
+$x = 10;
+$y = 3;
+$result = $x - $y;
+echo $result;
+echo $x.' - '.$y.' = '.$result;
+
+// JAVASCRIPT
+// 1. Переменные без знака "$"
+x = 10;
+y = 3;
+result = x - y;
+// вывод на экран "alert"
+alert (result);
+// конкантенация вместо точек (.) -> (+)
+echo $x+' - '+$y+' = '+$result;
+
+// ЦИКЛЫ
+x = 1;
+while(x < 3) {
+	alert(x);
+	++x;
+}
+
+do {
+	alert(x);
+	++x;
+} while (x < 3);
+
+for (i=1; i<10; ++i) {
+	alert(i);
+}
+
+x = prompt('Сколько вам лет?',18);
+alert('Вы указали, что вам '+ x +' лет!');
+
+
+CONFIRM
+- возвращает true или false
+- если нажимаем кнопку ок - true
+- кнопка отмена - false
+x = confirm('Вы точно хотите удалить комментарий?');
+if(x) {
+	alert('Вы согласились с удалением');
+} else {
+	alert('Вы отказались удалять');
+}
+
+// Всегда при удалении чего то, справшивайте у пользователь, точно он хочет это сделать
+if(confirm('Вы точно хотите удалить комментарий?')) {
+	// делаем запрос к БД и удаляем комент
+} else {
+	alert('Не хотите? Как хотите...');
+}
+
+
+ФУНКЦИИ
+
+function calc(num1, num2, action) {
+	// если action не был передан, устанавливаем его по умолчанию
+	if(action === underfined) {
+		action == 'plus';
+	}
+	
+	var res = 0;
+	if(action == 'plus') {
+		res = num1 + num2;
+	} else if {
+		res = num1-num2;
+	}
+	return res;
+}
+
+// Вывод функции
+x = calc(1,5);
+alert('Результат: ' + x);
+
+x = calc(6,5, 'minus');
+alert('Результат: ' + x);
+
+
+PHP:
+$var - локальная переменная
+$_STSSION, $_COOKIE, $GLOBALS
+define('CONST','123');
+
+JS:
+var $var - локальная
+$var - глобальная
+- внутри ф-и граммотно использовать локальные переменные
+
+// если хотим в ф-и пользоваться глобальной перемннной, перед ф-й ее нужно объявить
+
+y = 5;
+function calc(num1, num2, action) {
+	// если action не был передан, устанавливаем его по умолчанию
+	if(action === underfined) {
+		action == 'plus';
+	}
+	
+	y = 6;
+	var res = 0;
+	if(action == 'plus') {
+		res = num1 + num2;
+	} else if {
+		res = num1-num2;
+	}
+	return res;
+}
+
+// до вывода ф-и
+alert(y); // выведит 5
+x = calc(1,5);
+// после вывода ф-и
+alert(y);  // выведит 6
+
+
+
+// ВСТРОЕННЫЕ ФУНКЦИИ
+
+parseInt - преобразовывыет строку в целое число
+alert(parseInt('12px'));  // 12
+
+parseFloat - для дробных цисел (как float в php)
+alert(parseFloat('12.5px'));  // 12
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

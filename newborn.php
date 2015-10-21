@@ -1,0 +1,1 @@
+<img src="images/9386.jpg" width="964" height="411" alt="новорожденные">
