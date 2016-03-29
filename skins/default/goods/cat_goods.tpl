@@ -1,20 +1,28 @@
-<div class="news">  
-<h1 class="goods_all_view">Новости категории: </h1>
-
+<div class="goods">  
+<h1 class="goods_all_view">Товары категории: </h1>
   <?php while($row = $result->fetch_assoc()) { ?>
-    <div class="post">  
-      <!--Заголовок новости--> 
-      <div class="post_title">
-        <p class='post_name'><a href="/goods/full_good?id=<?php echo $row['id']; ?>"><?php echo $row['title']; ?></a></p>
-        <p class='post_adds'>Дата добавления: <?php echo $row['date']; ?></p>
-      </div>
-      <!--Описание-->
-      <p class='post_desc'><?php echo $row['description']; ?></p>     
+    <div id="goods_conteiner">
+        <div class="left_part">
+          <div class="img"><a href="/goods/full_good?id=<?php echo $row['id']; ?>">
+          <img src="<?php echo $row['good_big']; ?>"></div></a>
+        </div>
+        
+        <div class="right_part">
+          <!--Выводим заголовок-->
+          <div class="goods_title"><a href="/goods/full_good?id=<?php echo $row['id']; ?>">
+           <?php echo htmlspecialchars($row['title']); ?></a>
+          </div>
+          <br>
+          <div class="goods_description"><?php echo $row['description']; ?>
+            <!--Ссылка на полную статью -->
+            <a class="underline" href="/goods/full_good?id=<?php echo $row['id']; ?>"> Подробнее → </a>
+          </div>
+        </div>
     </div>
-    
+  <div class="clear"></div>
   <?php } ?> 
 </div>
-	<?php 
-		// вывод постраничной навигации
-        Paginator::showPaginator($cat); 
-    ?>    
+<!-- Вывод постраничной навигации -->
+<?php 
+  Paginator::showPaginator($cat); 
+?>    

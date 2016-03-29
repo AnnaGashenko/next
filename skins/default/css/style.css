@@ -52,6 +52,8 @@ table {
 .fix{
 	width: 964px;
 	height:170px;
+	background-color: #fff;
+    position: fixed;
 }
 
 	
@@ -128,6 +130,8 @@ text-decoration:underline;
 	right:0px;
 }
 
+
+
 .button_exit{
     border-bottom: 1px solid #cccccc;
     border-radius: 5px;
@@ -163,13 +167,15 @@ text-decoration:underline;
 	padding:0 5px 0 10px;
 }
 	
-.user a{
-    display: block;
+
+.user a {
+    color: #4a4951;
+    display: inline-block;
+    font-weight: bold;
     height: 23px;
-	line-height:23px;
-	display:inline-block;
-	text-decoration:underline;
-	padding:0 10px 0 5px;
+    line-height: 23px;
+    padding: 0 10px 0 5px;
+    text-decoration: underline;
 }
 	
 	
@@ -282,15 +288,15 @@ height:31px;
 	cursor:pointer;
 }
                                         /*Конец блока header*/
-										
-                                        /*Начало блока menu*/
+						                                        /*Начало блока menu*/
 
 #main_menu {
 	margin-top:5px;
-}
-.nav{
-	height:24px;
+	height:34px;
 	background: #269e94;
+}
+
+.nav{
 	margin-bottom:0px;
 }
 
@@ -302,11 +308,11 @@ float:left;
 	text-decoration: none;
 	color:#FFF;
 	font-family:Tahoma, Geneva, sans-serif;
-	font-size: 9px;
+	font-size: 12px;
 	display:block;
 	height:24px;
 	line-height:24px;
-	padding:0 15px;
+	padding:5px 15px;
 }
 
 .nav li a:hover{
@@ -372,7 +378,7 @@ text-decoration: underline;
 	height:100%;
 	clear:both;
 	margin-bottom: 50px;
-	padding-top:20px;
+	padding-top:170px;
 }
 
 .conteiner .static{
@@ -831,12 +837,10 @@ text-decoration:underline;
     padding: 10px;
 }
 
-.comment_title{
-	word-wrap: break-word;
-}
+
+
 
 .comment_body {
-    padding-bottom: 15px;
     padding-left: 30px;
  	line-height: 18px;
 	word-wrap: break-word;
@@ -868,7 +872,7 @@ text-decoration:underline;
 }
 
 
-.comments h1{
+.reviews{
     color: #cc2c92;
     font-family: Arial,Helvetica,sans-serif;
     font-size: 170%;
@@ -1009,7 +1013,6 @@ text-decoration:underline;
 	color:#0e81af;
 	font-size:18px;
 	text-align:left;
-	width:200px;
 	float:left;
 }
 
@@ -1153,7 +1156,7 @@ text-decoration:underline;
 
 .navigator{
 	height:65px;
-	margin-bottom: 40px;
+	margin-bottom: 30px;
 }
 
 
@@ -1368,6 +1371,7 @@ text-decoration:underline;
 }
 
 #modal_window .form-container {
+	margin: 0 auto;
    border: 1px solid #cccccc;
    background-color: #FFF;
    -webkit-border-radius: 8px;
@@ -1382,7 +1386,25 @@ text-decoration:underline;
    min-width:230px;
    padding:20px;
    width:230px;
-   }
+}
+
+.registration_window .form-container{
+   border: 1px solid #cccccc;
+   background-color: #FFF;
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   border-radius: 8px;
+   -webkit-box-shadow: rgba(000,000,000,0.9) 0 1px 2px, inset rgba(255,255,255,0.4) 0 0px 0;
+   -moz-box-shadow: rgba(000,000,000,0.9) 0 1px 2px, inset rgba(255,255,255,0.4) 0 0px 0;
+   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+   font-family: 'Helvetica Neue',Helvetica,sans-serif;
+   text-decoration: none;
+   vertical-align: middle;
+   min-width:230px;
+   padding:40px;
+   width:230px;
+   margin: 0 auto;
+}
 .form-field {
    border: 1px solid #cccccc;
    -webkit-border-radius: 4px;
@@ -1469,9 +1491,58 @@ text-decoration:underline;
 
 
 
+.registration_window .submit-button {
+   border: 1px solid #447314;
+   background: #6aa436;
+   background: -webkit-gradient(linear, left top, left bottom, from(#8dc059), to(#6aa436));
+   background: -webkit-linear-gradient(top, #8dc059, #6aa436);
+   background: -moz-linear-gradient(top, #8dc059, #6aa436);
+   background: -ms-linear-gradient(top, #8dc059, #6aa436);
+   background: -o-linear-gradient(top, #8dc059, #6aa436);
+   background-image: -ms-linear-gradient(top, #8dc059 0%, #6aa436 100%);
+   -webkit-border-radius: 4px;
+   -moz-border-radius: 4px;
+   border-radius: 4px;
+   -webkit-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   -moz-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   text-shadow: #addc7e 0 1px 0;
+   color: #31540c;
+   font-family: helvetica, serif;
+   padding: 8.5px 18px;
+   font-size: 14px;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.registration_window .submit-button:hover {
+   border: 1px solid #447314;
+   text-shadow: #31540c 0 1px 0;
+   background: #6aa436;
+   background: -webkit-gradient(linear, left top, left bottom, from(#8dc059), to(#6aa436));
+   background: -webkit-linear-gradient(top, #8dc059, #6aa436);
+   background: -moz-linear-gradient(top, #8dc059, #6aa436);
+   background: -ms-linear-gradient(top, #8dc059, #6aa436);
+   background: -o-linear-gradient(top, #8dc059, #6aa436);
+   background-image: -ms-linear-gradient(top, #8dc059 0%, #6aa436 100%);
+   color: #fff;
+   }
+.registration_window .submit-button:active {
+   text-shadow: #31540c 0 1px 0;
+   border: 1px solid #447314;
+   background: #8dc059;
+   background: -webkit-gradient(linear, left top, left bottom, from(#6aa436), to(#6aa436));
+   background: -webkit-linear-gradient(top, #6aa436, #8dc059);
+   background: -moz-linear-gradient(top, #6aa436, #8dc059);
+   background: -ms-linear-gradient(top, #6aa436, #8dc059);
+   background: -o-linear-gradient(top, #6aa436, #8dc059);
+   background-image: -ms-linear-gradient(top, #6aa436 0%, #8dc059 100%);
+   color: #fff;
+}
 
-
-
+.error_reg{
+	color: #DD0000;
+	margin-top: -15px;
+}
 #form_authorization .form-container {
    border: 1px solid #cccccc;
    background-color: #FFF;
@@ -1569,44 +1640,6 @@ text-decoration:underline;
    background-image: -ms-linear-gradient(top, #6aa436 0%, #8dc059 100%);
    color: #fff;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
    
    
 .error {
@@ -1669,4 +1702,192 @@ input.error {
 
 #mess{
 	display:none;
+}
+
+/* css chat */
+#chat{
+	text-align: left;
+    min-height: 518px;
+    height: 1px;
+}
+
+#chat_online{
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	/*display: table-cell; */
+	float: left;
+	width: 200px;
+	height: 100%;
+}
+
+#chat_send_form{
+	display: table;
+}
+
+
+.comment-chat{
+	margin: 10px;
+	border: 1px solid #e1e1e1;
+	height: auto;
+	width: auto;
+	color:#444;
+}
+
+
+
+
+.input-group{
+	display: table-cell; 
+	height: 25px;
+	padding: 10p
+}
+
+h3.comment-title{
+	height: 40px;
+	line-height: 37px;
+	font-size: 14px;
+	margin:0 5px;
+	color:#555;
+	border-bottom: 1px solid #e1e1e1;
+}
+
+.comments-list{
+	height: auto;
+	font-size: 13px;
+	margin:0 5px 10px 5px;
+	color:#555;
+	border-bottom: 1px solid #e1e1e1;
+}
+
+
+#chat_online h2 {
+    font-weight: 800;
+    margin: 10px 0;
+    text-align: center;
+}
+
+
+#chat_online ul li {
+    list-style-type: disc;
+    margin-left: 30px;
+    padding: 3px 0;
+}
+
+
+#chat_online ul li:hover {
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+#chat-mess .comment_block {
+    background-color: #C7EDFC;
+    border: none !important;
+    border-radius: 5px;
+    margin: 0 0 7px 0;
+    padding: 10px;
+}
+
+
+#chat_send_form .message-send{
+	display: table-cell; 
+	border: 1px solid #ddd;
+	border-right: 0px;
+	height: 50px;
+	padding: 10px;
+	margin-left:0 !important;
+	margin-bottom: -1px;
+}
+
+ 
+
+
+#chat_send_form form .input-group .chat-btn-add{
+	background-color: #fff;
+	border: 1px solid #ddd;
+	height: 46px;
+	margin-right: -4px;
+	padding: 10px 15px;
+	color:#333;
+}
+
+
+.chat-btn-send:hover{
+	background-color: #337ab7 !important;
+	color:#fff !important;
+}
+
+.input-group .smile:hover{
+	background-color: #337ab7 !important;
+	color:#fff !important;
+}
+
+.bold:hover{
+	background-color: #337ab7 !important;
+	color:#fff !important;
+}
+
+.italic:hover{
+	background-color: #337ab7 !important;
+	color:#fff !important;
+}
+
+
+#chat-mess{
+	margin-left: 10px;
+	float: left;
+	height: 100%;
+}
+
+#chat_send_form form textarea{
+    width: 730px !important;
+}
+
+#all-mess{
+	padding: 0 30px;
+	height: 400px;
+	overflow: auto;
+	width: 691px;
+}
+
+#chat_form .text_error{
+	color:#F00;
+	font-size: 14px;
+}
+.chat_auth{
+	border: 1px solid #ddd !important;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 20px;
+	text-align: center;
+	margin: 20px 47px 0 30px;
+	color: #595959;
+}
+
+#users .search_dishes{
+	border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 24px;
+    line-height: 24px;
+    padding-left: 5px;
+    width: 425px;
+}
+
+.info_order{
+	text-align: left;
+	color: red;
+}
+
+.tableTitle{
+	background-color: #ccc !important; 
+    border-right: 1px solid #ddd !important;
+    color: #666 !important;
+    padding: 5px !important;
+    font-weight: bold;
+}
+
+.title_orders{
+	font-size: 20px;
+	margin-top: 40px;
 }

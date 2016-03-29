@@ -18,14 +18,14 @@
     </form>
   
   
-<?php 
-	echo @$login; //сокращено от того, что ниже
-	if(isset($pass)) {
-		echo $pass;
-	}
-	if(isset($false_email)) {
-		echo $false_email;
-	}
-} // закрывает else
+    <?php 
+    	echo @$login; //сокращено от того, что ниже
+    	if(isset($pass)) {
+    		echo $pass;
+    	}
+    	if(isset($false_email)) {
+    		echo $false_email;
+    	}
+} ?> <!-- / close else --> 
 
-?>
+

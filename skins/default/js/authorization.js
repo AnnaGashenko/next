@@ -39,11 +39,11 @@ $(document).ready(function() {
 					check: check
 				},
 				success: function(msg) {
-					if(msg == 'no') {					
-						$('#errors').text('Нет пользователя с таким логином и паролем').css('display','block');
+					if(msg == 'no') {		
+						$("#auth_login, #auth_pass").css('border','1px solid #F00');			
+						$('#errors').text('Неверный логин или пароль').css('display','block');
 					} else {
-						var path = window.location.href;
-						window.location.href = path;
+						document.location.href = document.location;
 					}
 				}
 			});

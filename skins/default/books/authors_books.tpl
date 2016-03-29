@@ -1,6 +1,5 @@
 <div class="news">  
-<h1 class="goods_all_view">Новости категории: </h1>
-
+  <h1 class="goods_all_view">Новости категории: </h1>
   <?php while($row = $res->fetch_assoc()) { ?>
     <div class="post">  
       <!--Заголовок новости--> 

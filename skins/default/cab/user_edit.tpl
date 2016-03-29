@@ -6,7 +6,7 @@
   <table border="0" cellspacing="0" cellpadding="0">
     <tr>
       <td>
-        <div class="img_file"><img src="<?php echo $_SESSION['user']['avatar_big']; ?>"></div>
+        <div class="img_file"><img src="<?php echo $_SESSION['user']['photo_big']; ?>"></div>
       </td>
       <td>
         <form action="" method="post" enctype="multipart/form-data">

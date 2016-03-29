@@ -1,41 +1,34 @@
 <div class="goods" style="padding-top:20px; padding-bottom:20px;">
-<?php /*?>	<?php if(!isset($_SESSION['user']) || $_SESSION['user']['access'] != 5) { ?>
-    <div>У вас не доступа</div>
-    <?php } else { ?>
-<?php */?>        <h1><?php echo @$info; ?></h1>
-        <div class="navigator">
-          <ul>
-			<?php while($row = $res->fetch_assoc()) { ?>
-                <li><a href="/goods/cat_goods?cat=<?php echo $row['name']; ?>"><?php echo htmlspecialchars($row['name']); ?></a></li>
-            <?php } ?> 
-          </ul>
-        </div>  
-        <div class="goods_all_view">Все существующие товары:</div>
-        <form action="" method="post">
-            <?php while($row = $goods->fetch_assoc()) { ?>
-            <div id="goods_conteiner">
-                <div class="left_part">
-                  <div class="img"><a href="/goods/full_good?id=<?php echo $row['id']; ?>">
-                  <img src="<?php echo $row['good_big']; ?>"></div></a>
-                </div>
-                
-                <div class="right_part">
-                  <!--Выводим заголовок-->
-                  <div class="goods_title"><a href="/goods/full_good?id=<?php echo $row['id']; ?>">
-				    <?php echo htmlspecialchars($row['title']); ?></a>
-                  </div>
-                  <br>
-                  <div class="goods_description"><?php echo $row['description']; ?>
-                    <!--Ссылка на полную статью -->
-                    <a class="underline" href="/goods/full_good?id=<?php echo $row['id']; ?>"> Подробнее → </a>
-                  </div>
-                </div>
-                
+  <h1><?php echo @$info; ?></h1>
+  <div class="navigator">
+    <ul>
+		<?php while($row = $res->fetch_assoc()) { ?>
+      <li><a href="/goods/cat_goods?cat=<?php echo $row['name']; ?>"><?php echo htmlspecialchars($row['name']); ?></a>
+      </li>
+    <?php } ?> 
+    </ul>
+  </div>  
+  <div class="goods_all_view">Все существующие товары:</div>
+      <?php while($row = $goods->fetch_assoc()) { ?>
+        <div id="goods_conteiner">
+            <div class="left_part">
+              <div class="img"><a href="/goods/full_good?id=<?php echo $row['id']; ?>">
+              <img src="<?php echo $row['photo_big']; ?>"></div></a>
             </div>
-             <div class="clear"></div>
-<?php /*?>            <?php } ?>
-<?php */?>            <!--Создаем кнопку для удаления выбранных чекбоксов-->
-        </form>
+            
+            <div class="right_part">
+              <!--Выводим заголовок-->
+              <div class="goods_title"><a href="/goods/full_good?id=<?php echo $row['id']; ?>">
+  	           <?php echo htmlspecialchars($row['title']); ?></a>
+              </div>
+              <br>
+              <div class="goods_description"><?php echo $row['description']; ?>
+                <!--Ссылка на полную статью -->
+                <a class="underline" href="/goods/full_good?id=<?php echo $row['id']; ?>"> Подробнее → </a>
+              </div>
+            </div>
+        </div>
+      <div class="clear"></div>
     <?php } ?>
 </div>
 

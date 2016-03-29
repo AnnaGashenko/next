@@ -1,11 +1,10 @@
 <div class="full_book">  
     <h1> <p class="full_title" ><?php echo htmlAll($row['title']); ?></p></h1>
-    <div class="img"><img src="<?php echo $row['book_big']; ?>"></div>
-    
+    <div class="img"><img src="<?php echo $row['photo_big']; ?>"></div>
     <div class="right_box">
         <div class="name">Автор: </div>
         <?php  while($row3 = $res3->fetch_array()) { ?>
-              <!--Передаем через $_GET id автора-->
+          <!--Передаем через $_GET id автора-->
           <div class="link_author">
             <a href="/books/author_books?id=<?php echo $row3['id']; ?>"><?php echo htmlAll($row3['author']); ?></a>
           </div>
@@ -15,7 +14,8 @@
         <div><?php echo htmlAll($row['cod']); ?></div>
         <div class="name">Цена: </div>
         <div><?php echo htmlAll($row['price']); ?> грн.</div>
-    </div>
+    </div> <!-- /.right_box -->
+
     <div class="clear"></div>
     <div class="product-description">
       <p class="book_title"> Описание</p>
