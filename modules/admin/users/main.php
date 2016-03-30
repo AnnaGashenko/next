@@ -15,14 +15,11 @@ if(isset($_GET['submit_search'],$_GET['search'])){
 		SELECT *
 		FROM `users`
 		WHERE `login` LIKE '%".stringAll($_GET['search'])."%'
-		LIMIT 1
 	");
-	if($search->num_rows){
-		$res = $search->fetch_assoc();	
-	} else {
+	if(!mysqli_num_rows($search)){
 		$_SESSION['info'] = 'Пользователь не найден!';
 		header("Location: /admin/users");
-		exit();
+		exit();	
 	}
 }
 

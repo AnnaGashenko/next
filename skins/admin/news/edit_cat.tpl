@@ -22,7 +22,7 @@
       <tr>
         <td></td>
         
-        <td><input name="edit" type="submit" value="Отредактировать товар"></td>
+        <td><input name="edit" type="submit" value="Отредактировать категорию"></td>
       </tr>
     </table>
    </form>

@@ -132,7 +132,10 @@ text-decoration:underline;
 	font-weight:bold;
 }
 
-
+.block_right a{
+	color: #4a4951;
+	font-weight: bold;
+}
 .view_site a{
 	text-decoration:underline;
 }
@@ -239,7 +242,7 @@ height:31px;
 
 
 .nav{
-	height:24px;
+	height:34px;
 	background: #269e94;
 	margin-bottom:0px;
 }
@@ -256,7 +259,7 @@ float:left;
 	display:block;
 	height:24px;
 	line-height:24px;
-	padding:0 15px;
+	padding:5px 15px;
 }
 
 .nav li a:hover{
@@ -851,6 +854,12 @@ text-decoration:underline;
 .news table td {
 	padding-bottom:20px;
 }
+
+
+.admin_table .table tr th:first{
+	width:20px;
+}
+
 textarea{
 	width:430px;
 }
@@ -865,7 +874,6 @@ textarea{
     text-align: left;
     vertical-align: top;
 }
-
 
 
 textarea{
@@ -1058,17 +1066,18 @@ body {
 .admin_table .r-l {
     border-top-left-radius: 4px;
 }
-.admin_table table th {
+.admin_table table tr th {
     background-color: #333333;
     border-right: 1px solid #ddd;
     color: #ffffff;
     padding: 5px;
+    width: 100px;
 }
+
 
 .admin_table table tr{
 	text-align:left;
 }
-
 .news_error{
 	padding-left:20px;
 }

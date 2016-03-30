@@ -4,13 +4,13 @@ if(isset($_POST['add'], $_POST['text'], $_POST['cod'], $_POST['price'])){
 
 	$errors = array();
 	
-	$book['small'] = '/uploaded/books/100x150/no-foto.png';
-	$book['big']   = '/uploaded/books/250x300/no-foto.png';
+	$photo['small'] = '/uploaded/books/100x150/no-foto.png';
+	$photo['big']   = '/uploaded/books/200x300/no-foto.png';
 	
 	if($_FILES['file']['error'] == 0) {
 		if($temp = Uploader::upload($_FILES['file'], 'books')) {
-			$book['small'] = Uploader::resize($temp,100,150);
-			$book['big']   = Uploader::resize($temp,200,300);
+			$photo['small'] = Uploader::resize($temp,100,150);
+			$photo['big']   = Uploader::resize($temp,200,300);
 		} else {
 			$errors['file'] = Uploader::$error;
 		}		
@@ -28,6 +28,7 @@ if(isset($_POST['add'], $_POST['text'], $_POST['cod'], $_POST['price'])){
 	if(empty($_POST['cod'])){
 		$errors['cod'] = 'Вы не ввели код товара';
 	}
+
 	$res = q("
 		SELECT `cod`
 		FROM `books`
@@ -51,8 +52,8 @@ if(isset($_POST['add'], $_POST['text'], $_POST['cod'], $_POST['price'])){
 			`description` = '".stringAll($_POST['description'])."',
 			`cod`         = '".(int) $_POST['cod']."',
 			`price`       = '".(int) $_POST['price']."',
-			`book_small`  = '".stringAll($book['small'])."',
-			`book_big`    = '".stringAll($book['big'])."'
+			`photo_small`  = '".stringAll($photo['small'])."',
+			`photo_big`    = '".stringAll($photo['big'])."'
 		");		
 		
 		$res = q("
@@ -70,7 +71,7 @@ if(isset($_POST['add'], $_POST['text'], $_POST['cod'], $_POST['price'])){
 			");
 		}
 		
-		$_SESSION['info'] = 'Товар был добавлен';
+		$_SESSION['info'] = 'Книга была добавлена';
 		header('Location: /admin/books');
 		exit();
 	}

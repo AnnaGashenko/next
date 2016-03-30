@@ -11,8 +11,8 @@ if(isset($_POST['edit'], $_POST['title'], $_POST['cat'], $_POST['text'], $_POST[
 	
 	if($_FILES['file']['error'] == 0) {
 		if($temp = Uploader::upload($_FILES['file'], 'goods')) {
-			$good['small'] = Uploader::resize($temp,100,100);
-			$good['big']   = Uploader::resize($temp,140,140);
+			$photo['small'] = Uploader::resize($temp,100,100);
+			$photo['big']   = Uploader::resize($temp,140,140);
 		} else {
 			$errors['file'] = Uploader::$error;
 		}
@@ -39,9 +39,9 @@ if(isset($_POST['edit'], $_POST['title'], $_POST['cat'], $_POST['text'], $_POST[
 	
 	//Если ошибок нет, то добавляем данные в БД
 	if(!count($errors)){
-		if(isset($good['small'], $good['big'])) {
-			$small = ",`good_small` = '".stringAll($good['small'])."'"; 
-			$big   = ",`good_big`   = '".stringAll($good['big'])."'"; 
+		if(isset($photo['small'], $photo['big'])) {
+			$photo = ",`photo_small` = '".stringAll($photo['small'])."'"; 
+			$photo   = ",`photo_big`   = '".stringAll($photo['big'])."'"; 
 		} 
 		q("
 			UPDATE `goods` SET

@@ -1,14 +1,16 @@
 <div class="news">    
   <h1>ДОБАВЛЕНИЕ КНИГИ</h1>
+  <form action="" method="post" enctype="multipart/form-data">
     <table border="0" cellspacing="0" cellpadding="0">
       <tr>
         <td class="news_title">Фото книги</td>
         <td class="news_title">
-          <form action="" method="post" enctype="multipart/form-data">
             <!--  Поле для ввода имени файла, который пересылается на сервер-->  
             <input type="file" name="file">
         </td>
- 	    <td><span class="news_error"><?php echo @$errors['file']; ?></span></td>      
+   	    <td>
+          <span class="news_error"><?php echo @$errors['file']; ?></span>
+        </td>      
       </tr>  
       <tr>
         <td class="news_title" width="200">Заголовок книги</td>
@@ -21,11 +23,9 @@
         <td>
           <select class="goods_cat" name="author[]" size="5" multiple>
             <option selected="selected" disabled>Выбирите автора</option> 
-            <?php 
-                while($row = $author->fetch_assoc()){  
-                	echo '<option value="'.$row['id'].'">'.$row['author'].'</option>';  
-                }   
-            ?> 
+            <?php while($row = $author->fetch_assoc()) {  
+              echo '<option value="'.$row['id'].'">'.$row['author'].'</option>';  
+            } ?> 
           </select>
         </td>
         <td><span class="news_error"><?php echo @$errors['author']; ?></span></td>

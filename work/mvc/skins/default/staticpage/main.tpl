@@ -1,1 +1,0 @@
-Статика: <?php echo $staticpage['text']; ?>

@@ -25,5 +25,5 @@
         <td><input name="edit" type="submit" value="Отредактировать товар"></td>
       </tr>
     </table>
-   </form>
+  </form>
 </div>

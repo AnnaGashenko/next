@@ -5,7 +5,7 @@
       <tr>
         <td class="news_title">Фото товара</td>
         <td class="news_title">
-        <img src="<?php echo $row['good_big']  ?>">
+        <img src="<?php echo $row['photo_big']  ?>">
           <form action="" method="post" enctype="multipart/form-data">
             <!--  Поле для ввода имени файла, который пересылается на сервер-->  
             <input type="file" name="file">

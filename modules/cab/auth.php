@@ -1,4 +1,5 @@
 <?php
+
 // Авторизация на сайте
 if(isset($_COOKIE['auto_autoauth_hash'], $_COOKIE['auto_autoauth_id'])){
 	header("Location: /");
@@ -14,9 +15,10 @@ if(isset($_POST['login'],$_POST['pass'])) {
 			AND `active` = 1
 	    LIMIT 1
 	");
-	// Если результат совпадает 
+	// Если результат не совпадает 
 	if(!$res->num_rows){
 		echo 'no';	
+		exit();
 	} else {
 		// Храним инфо о пользователе в $_SESSION
 		$_SESSION['user'] = $res->fetch_assoc();
@@ -41,7 +43,7 @@ if(isset($_POST['login'],$_POST['pass'])) {
 			");
 		}	
 	}
-	exit();
+ 	 
 }
 
 

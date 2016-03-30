@@ -54,13 +54,13 @@ if(isset($_POST['edit'], $_POST['login'], $_POST['email'])){
 		}
 	}
 	
-	$avatar['small'] = $_SESSION['user']['avatar_small'];
-	$avatar['big']   = $_SESSION['user']['avatar_big'];
+	$photo['small'] = $_SESSION['user']['photo_small'];
+	$photo['big']   = $_SESSION['user']['photo_big'];
 	
 	if($_FILES['file']['error'] == 0) {
 		if($temp = Uploader::upload($_FILES['file'],'avatar')) {
-			$avatar['small'] = Uploader::resize($temp,20,20);
-			$avatar['big']   = Uploader::resize($temp,100,100);
+			$photo['small'] = Uploader::resize($temp,20,20);
+			$photo['big']   = Uploader::resize($temp,100,100);
 		} else {
 			$errors['file'] = Uploader::$error;
 		}
@@ -76,8 +76,8 @@ if(isset($_POST['edit'], $_POST['login'], $_POST['email'])){
 			UPDATE `users` SET
 			`login`    = '".stringAll($_POST['login'])."',
 			`email`    = '".stringAll($_POST['email'])."',
-			`avatar_small` = '".stringAll($avatar['small'])."',
-			`avatar_big`   = '".stringAll($avatar['big'])."'
+			`photo_small` = '".stringAll($photo['small'])."',
+			`photo_big`   = '".stringAll($photo['big'])."'
 			".(isset($pass) ? $pass : '')."
 			WHERE `id` = ".(int)$_SESSION['user']['id']."
 		"); 

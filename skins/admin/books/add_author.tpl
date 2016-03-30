@@ -1,10 +1,10 @@
 <div class="news">    
   <h1>ДОБАВЛЕНИЕ АВТОРА</h1>
+  <form action="" method="post" enctype="multipart/form-data">
     <table border="0" cellspacing="0" cellpadding="0">
       <tr>
         <td class="news_title">Фото автора</td>
         <td class="news_title">
-          <form action="" method="post" enctype="multipart/form-data">
             <!--  Поле для ввода имени файла, который пересылается на сервер-->  
             <input type="file" name="file">
         </td>

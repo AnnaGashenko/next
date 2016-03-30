@@ -1,10 +1,17 @@
 <?php
 
+// if user sign up -> location to main
+if (isset($_SESSION['user'])) {
+	header("Location: /");
+	exit();
+}
 
 //Обработка регистрации
-if(isset($_POST['login'],$_POST['password'],$_POST['email'],$_POST['age'])){
+if(isset($_POST['sendreg'],$_POST['login'],$_POST['password'],$_POST['email'])){ 
+
 	// Создаем массив с ошибками
 	$errors = array();
+	
 	if(empty($_POST['login'])){
 		$errors['login'] = 'Вы не заполнили поле логин';
 	} elseif(mb_strlen($_POST['login']) < 2) {
@@ -51,8 +58,8 @@ if(isset($_POST['login'],$_POST['password'],$_POST['email'],$_POST['age'])){
 	}
 	
 	// Дефолтное фото при регистрации
-	$avatar['small'] = '/uploaded/avatar/20x20/default_small.png';
-	$avatar['big']   = '/uploaded/avatar/100x100/default_large.png';
+	$photo['small'] = '/uploaded/avatar/20x20/default_small.png';
+	$photo['big']   = '/uploaded/avatar/100x100/default_large.png';
 
 	
 	//Если ошибок нет, то добавляем данные в БД
@@ -62,10 +69,9 @@ if(isset($_POST['login'],$_POST['password'],$_POST['email'],$_POST['age'])){
 			`login`             = '".stringAll($_POST['login'])."',
 			`password`          = '".myHash($_POST['password'])."',
 			`email`             = '".stringAll($_POST['email'])."',
-			`age`               = ".(int)$_POST['age'].",
 			`hash`              = '".myHash($_POST['login'].$_POST['email'])."',
-			`avatar_small` = '".stringAll($avatar['small'])."',
-			`avatar_big`   = '".stringAll($avatar['big'])."',
+			`photo_small` = '".stringAll($photo['small'])."',
+			`photo_big`   = '".stringAll($photo['big'])."',
 			`date_registration` = NOW()
 		"); 
 		
@@ -90,8 +96,6 @@ if(isset($_POST['login'],$_POST['password'],$_POST['email'],$_POST['age'])){
 		// Делаем переадресацию на эту же страницу
 		header("Location: /cab/registration");
 		exit();
-		
-
 	}
 }
 

@@ -8,25 +8,27 @@ $module = stringAll($_GET['module']);
 $cat = stringAll($_GET['cat']);
 
 
-	// Определяем общее число сообщений в выбранной категории 
-	$res = q("
-		SELECT 
-		COUNT(*) 
+// Определяем общее число сообщений в выбранной категории 
+$res = q("
+	SELECT 
+	COUNT(*) 
+	FROM `".$module."`
+	WHERE `cat` = '".$cat."'
+");
+if($res->num_rows) {
+	Paginator::$show_pages = 3;
+	Paginator::__($page_num,$page,$module,$res); 
+			
+	$result = q("
+		SELECT *
 		FROM `".$module."`
 		WHERE `cat` = '".$cat."'
+		ORDER BY `id`
+		LIMIT ".Paginator::$shift.",". Paginator::$num."
 	");
-	if($res->num_rows) {
-		Paginator::$show_pages = 3;
-		Paginator::__($page_num,$page,$module,$res); 
-				
-		$result = q("
-			SELECT *
-			FROM `".$module."`
-			WHERE `cat` = '".$cat."'
-			ORDER BY `id`
-			LIMIT ".Paginator::$shift.",". Paginator::$num."
-		");
-	}
+}
+
+
 
 /*
 	// Запрос к Базе данных - Выводим все новости

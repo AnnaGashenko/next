@@ -1,16 +1,15 @@
 <div class="news">    
   <h1>РЕДАКТИРОВАНИЕ ТОВАРА</h1>
-  
+  <form action="" method="post" enctype="multipart/form-data">
     <table border="0" cellspacing="0" cellpadding="0">
       <tr>
         <td class="news_title">Фото товара</td>
         <td class="news_title">
-        <img src="<?php echo $row['book_small']  ?>">
-          <form action="" method="post" enctype="multipart/form-data">
-            <!--  Поле для ввода имени файла, который пересылается на сервер-->  
-            <input type="file" name="file">
+        <img src="<?php echo $row['photo_small']  ?>">
+          <!--  Поле для ввода имени файла, который пересылается на сервер-->  
+          <input type="file" name="file">
         </td>
-		<td><span class="news_error"><?php echo @$errors['file']; ?></span></td>       
+		    <td><span class="news_error"><?php echo @$errors['file']; ?></span></td>       
       </tr>  
       <tr>
         <td class="news_title">Название товара</td>
@@ -58,11 +57,9 @@ echo '<option '.(((isset($_POST['edit']) && in_array($row2['id'], $_POST['author
         </td>
         <td><span class="news_error"><?php echo @$errors['price']; ?></span></td>
       </tr>
-  
-      <p style="font-size:10px">* - обязательные для заполнения</p>
+        <p style="font-size:10px">* - обязательные для заполнения</p>
       <tr>
         <td></td>
-        
         <td><input name="edit" type="submit" value="Отредактировать товар"></td>
       </tr>
     </table>

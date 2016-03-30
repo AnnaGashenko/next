@@ -3,19 +3,19 @@
 //Создаем массив с категориями
 //$category = array('Холодильники', 'Пылесосы','Телевизоры');
 
-if(isset($_POST['add'], $_POST['text'], $_POST['description'], $_POST['cod'], $_POST['price'])){
+if(isset($_POST['add'], $_POST['title'],$_POST['text'], $_POST['description'], $_POST['cod'], $_POST['price'])){
 	foreach($_POST as $k => $v){
 		$_POST[$k] = trim($v);
 	}
 	$errors = array();
 	
-	$good['small'] = '/uploaded/goods/100x100/no-foto.png';
-	$good['big']   = '/uploaded/goods/140x140/no-foto.png';
+	$photo['small'] = '/uploaded/goods/100x100/no-foto.png';
+	$photo['big']   = '/uploaded/goods/140x140/no-foto.png';
 	
 	if($_FILES['file']['error'] == 0) {
 		if($temp = Uploader::upload($_FILES['file'], 'goods')) {
-			$good['small'] = Uploader::resize($temp,100,100);
-			$good['big']   = Uploader::resize($temp,140,140);
+			$photo['small'] = Uploader::resize($temp,100,100);
+			$photo['big']   = Uploader::resize($temp,140,140);
 		} else {
 			$errors['file'] = Uploader::$error;
 		}		
@@ -49,8 +49,8 @@ if(isset($_POST['add'], $_POST['text'], $_POST['description'], $_POST['cod'], $_
 			`description` = '".stringAll($_POST['description'])."',
 			`cod`         = '".(int) $_POST['cod']."',
 			`price`       = '".(int) $_POST['price']."',
-			`good_small`  = '".stringAll($good['small'])."',
-			`good_big`    = '".stringAll($good['big'])."'
+			`photo_small`  = '".stringAll($photo['small'])."',
+			`photo_big`    = '".stringAll($photo['big'])."'
 		");
 		$_SESSION['info'] = 'Товар был добавлен';
 		header('Location: /admin/goods');

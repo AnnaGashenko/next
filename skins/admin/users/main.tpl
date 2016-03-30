@@ -38,16 +38,18 @@
         </tr>    
       </thead>
     <tbody>
-        <?php if(!empty($_GET['search'] )) { ?> 
+        <?php if(!empty($_GET['search'] )) { 
+          while($row_search = $search->fetch_assoc()) { ?>
                 <tr>
-                  <td><?php echo $res['id']; ?></td>
-                  <td><?php echo $res['email']; ?></td>
+                  <td><?php echo $row_search['id']; ?></td>
+                  <td><?php echo $row_search['email']; ?></td>
                   <td>               
-                    <a href="/admin/users/users_edit?id=<?php echo $res['id']; ?>"><?php echo htmlspecialchars($res['login']); ?></a>
+                    <a href="/admin/users/users_edit?id=<?php echo $row_search['id']; ?>"><?php echo htmlspecialchars($row_search['login']); ?></a>
                   </td>
-                  <td><?php echo $res['date_registration']; ?></td>
-                  <td><?php echo $res['date_active']; ?></td>
+                  <td><?php echo $row_search['date_registration']; ?></td>
+                  <td><?php echo $row_search['date_active']; ?></td>
                 </tr>
+          <?php } ?>
        <?php  } else { 
             while($row = $users->fetch_assoc()) { ?>              
                 <tr>

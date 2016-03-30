@@ -14,13 +14,13 @@ if(isset($_POST['add'], $_POST['text'], $_POST['author'])){
 		$errors['author'] = 'Такой автор уже есть';
 	}
 
-	$author['small'] = '/uploaded/author/100x150/no-foto.png';
-	$author['big']   = '/uploaded/author/228x300/no-foto.png';
+	$photo['small'] = '/uploaded/author/100x150/no-foto.png';
+	$photo['big']   = '/uploaded/author/228x300/no-foto.png';
 	
 	if($_FILES['file']['error'] == 0) {
 		if($temp = Uploader::upload($_FILES['file'], 'author')) {
-			$author['small'] = Uploader::resize($temp,100,150);
-			$author['big']   = Uploader::resize($temp,228,300);
+			$photo['small'] = Uploader::resize($temp,100,150);
+			$photo['big']   = Uploader::resize($temp,228,300);
 		} else {
 			$errors['file'] = Uploader::$error;
 		}		
@@ -38,8 +38,8 @@ if(isset($_POST['add'], $_POST['text'], $_POST['author'])){
 			INSERT INTO `books_author` SET
 			`text`         = '".stringAll($_POST['text'])."',
 			`author`       = '".stringAll($_POST['author'])."',
-			`author_small` = '".stringAll($author['small'])."',
-			`author_big`   = '".stringAll($author['big'])."'
+			`photo_small` = '".stringAll($photo['small'])."',
+			`photo_big`   = '".stringAll($photo['big'])."'
 		");
 		$_SESSION['info'] = 'Автор был добавлен';
 		header('Location: /admin/books');

@@ -5,7 +5,7 @@
       <tr>
         <td class="news_title" width="200">Название категории*</td>
 		<!--Чтобы не стиралась инфа которую заполнил пользователь, записываем ее в value--> 
-       <td><input name="name" type="text" value="<?php echo @htmlspecialchars($_POST['name']); ?>"></td>
+        <td><input name="name" type="text" value="<?php echo @htmlspecialchars($_POST['name']); ?>"></td>
         <td><span class="news_error"><?php echo @$error; ?></span></td>
       </tr>
       <tr>

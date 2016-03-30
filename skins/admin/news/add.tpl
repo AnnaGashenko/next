@@ -26,16 +26,16 @@
 
       <tr>
         <td class="news_title">Описание новости</td>
-        <td><textarea name="description" value="<?php echo @htmlspecialchars($_POST['description']); ?>"></textarea></td>
+        <td><textarea name="description"><?php echo @htmlspecialchars($_POST['description']); ?></textarea></td>
         <td style="vertical-align:middle"><span class="news_error"><?php echo @$errors['description']; ?></span></td>
       </tr>
       <tr>
         <td class="news_title">Полный текст новости</td>
-        <td><textarea name="text" value="<?php echo @htmlspecialchars($_POST['text']); ?>"></textarea></td>
+        <td><textarea name="text"><?php echo @htmlspecialchars($_POST['text']); ?></textarea></td>
         <td style="vertical-align:middle"><span class="news_error"><?php echo @$errors['text']; ?></span></td>
       </tr>
     </table>
     <p style="font-size:10px">* - обязательные для заполнения</p>
-    <input name="add" type="submit" value="Добавить новость">
+    <input name="submit" type="submit" value="Добавить новость">
   </form>
 </div>
