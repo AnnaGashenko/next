@@ -1,6 +1,5 @@
 <?php
 
-#
 class UnicumCode {
     protected $cod;
 
