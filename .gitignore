@@ -1,6 +1,2 @@
-# folder logs
-# Игнорируем папку
-logs/
-
-# Игнорируем файлы в папке docs с расширением .txt
-docs/*.txt
+# folder work
+.work
