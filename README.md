@@ -24,6 +24,11 @@ JQUERY
 2. Каталог книг
  
 3. Модуль новости
+
+Классы:
+class_Mail.php
+class_Paginator.php
+class_Uploader.php	
  
 4. Модуль отзывы
  
