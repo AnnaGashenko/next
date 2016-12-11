@@ -5,9 +5,9 @@ class Core {
 	static $CREATED  = 2013;
 	static $CONT     = 'modules';
 	static $SKIN     = 'default';	
-	static $DB_NAME  = 'main';	
-	static $DB_LOGIN = 'test';	
-	static $DB_PASS  = 'test';	
+	static $DB_NAME  = '';	
+	static $DB_LOGIN = '';	
+	static $DB_PASS  = '';	
 	static $DB_LOCAL = 'localhost';	
 	static $DOMAIN   = 'http://next/';
 	static $UPLOADER_DIR = '/uploaded/';	
